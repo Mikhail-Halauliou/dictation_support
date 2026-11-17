@@ -18,6 +18,7 @@
 import {DictationDevice} from './dictation_device';
 import {ButtonEventListener, ImplementationType} from './dictation_device_base';
 import {DigtaFootControlDevice} from './digta_foot_control_device';
+import {DigtaSonicMicDevice} from './digta_sonicmic_device';
 import {DigtaSoundboxDevice} from './digta_soundbox_device';
 import {FootControlDevice} from './foot_control_device';
 import {PowerMic3Device} from './powermic_3_device';
@@ -84,6 +85,17 @@ const DEVICE_FILTERS: Readonly<
         // Digta Soundbox 830
         Object.freeze(
             {vendorId: 0x15d8, productId: 0x0004, usagePage: 0x0c, usage: 1}),
+      ]),
+      [ImplementationType.DIGTA_SONICMIC]: Object.freeze([
+        // Digta SonicMic 3
+        Object.freeze(
+            {vendorId: 0x15d8, productId: 0x002a, usagePage: 0xff00, usage: 1}),
+        // Digta SonicMic II
+        Object.freeze(
+            {vendorId: 0x15d8, productId: 0x0025, usagePage: 0xff00, usage: 1}),
+        // Digta SonicMic II US
+        Object.freeze(
+            {vendorId: 0x15d8, productId: 0x0026, usagePage: 0xff00, usage: 1}),
       ]),
     });
 
@@ -233,6 +245,8 @@ export class DictationDeviceManager {
         return DigtaFootControlDevice.create(hidDevice);
       case ImplementationType.DIGTA_SOUNDBOX:
         return DigtaSoundboxDevice.create(hidDevice);
+      case ImplementationType.DIGTA_SONICMIC:
+        return DigtaSonicMicDevice.create(hidDevice);
       default:
         checkExhaustive(implType);
     }

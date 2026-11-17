@@ -16,12 +16,13 @@
  */
 
 import {DigtaFootControlDevice} from './digta_foot_control_device';
+import {DigtaSonicMicDevice} from './digta_sonicmic_device';
 import {DigtaSoundboxDevice} from './digta_soundbox_device';
 import {FootControlDevice} from './foot_control_device';
 import {PowerMic3Device} from './powermic_3_device';
 import {SpeechMikeGamepadDevice} from './speechmike_gamepad_device';
 import {SpeechMikeHidDevice} from './speechmike_hid_device';
 
-export type DictationDevice =
-    |SpeechMikeHidDevice|SpeechMikeGamepadDevice|PowerMic3Device|
-    FootControlDevice|DigtaFootControlDevice|DigtaSoundboxDevice;
+export type DictationDevice =|SpeechMikeHidDevice|SpeechMikeGamepadDevice|
+    PowerMic3Device|FootControlDevice|DigtaFootControlDevice|
+    DigtaSoundboxDevice|DigtaSonicMicDevice;

@@ -24,6 +24,7 @@ export enum ImplementationType {
   POWERMIC_3 = 3,
   DIGTA_FOOT_CONTROL = 4,
   DIGTA_SOUNDBOX = 5,
+  DIGTA_SONICMIC = 6,
 }
 
 export enum DeviceType {
@@ -54,6 +55,9 @@ export enum DeviceType {
   DIGTA_FOOT_CONTROL_540 = 36,
   DIGTA_FOOT_PEDAL_538 = 24,
   DIGTA_SOUNDBOX_830 = 4,
+  DIGTA_SONICMIC_3 = 42,
+  DIGTA_SONICMIC_II = 37,
+  DIGTA_SONICMIC_II_US = 38,
 }
 
 export enum ButtonEvent {
@@ -79,6 +83,8 @@ export enum ButtonEvent {
   ENTER_SELECT = 1 << 20,
   SCAN_END = 1 << 21,
   SCAN_SUCCESS = 1 << 22,
+  POSITION_BEGIN = 1 << 23,
+  POSITION_END = 1 << 24,
 }
 
 export type ButtonEventListener =

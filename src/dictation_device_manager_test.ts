@@ -350,6 +350,9 @@ describe('DictationDeviceManager', () => {
           {vendorId: 5592, productId: 36, usagePage: 65535, usage: 1},
           {vendorId: 5592, productId: 24, usagePage: 12, usage: 3},
           {vendorId: 5592, productId: 4, usagePage: 12, usage: 1},
+          {vendorId: 5592, productId: 42, usagePage: 65280, usage: 1},
+          {vendorId: 5592, productId: 37, usagePage: 65280, usage: 1},
+          {vendorId: 5592, productId: 38, usagePage: 65280, usage: 1},
         ]
       });
     });

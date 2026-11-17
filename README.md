@@ -31,6 +31,9 @@ TODO: host latest release and link here
 | Philips SpeechMike Ambient PSM5000       |                                    |                            |
 | Nuance PowerMic III                      |                                    |                            |
 | Nuance PowerMic 4                        |                                    |                            |
+| Grundig Digta SonicMic 3                 |                                    |                            |
+| Grundig Digta SonicMic II                |                                    |                            |
+| Grundig Digta SonicMic II US             |                                    |                            |
 
 ###  Supported platforms
 * Google Chrome on Windows, macOS, Linux and Chrome OS (Chromebooks)

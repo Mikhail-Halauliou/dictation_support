@@ -16,17 +16,17 @@ export type ButtonMappingTestCase = {
    then a ButtonEvent.NONE when the `resetInputCommand` (=emulating releasing
    the button) is being sent. If `expectedButtonEvents` is undefined, no button
    event should be emitted for the test case's `inputReportData` or the
-   `resetInputReport`.
+   `resetInputReport`. All input reports are sent with `reportId`.
  */
 export async function checkButtonMapping(
     fakeHidDevice: FakeHidDevice, expectedDicationDevice: DictationDeviceBase,
     buttonEventListener: jasmine.Spy, testCases: ButtonMappingTestCase[],
-    resetInputReport: number[]|undefined) {
+    resetInputReport: number[]|undefined, reportId = 0) {
   for (let i = 0; i < testCases.length; ++i) {
     const testCase = testCases[i];
     // Press button(s)
     buttonEventListener.calls.reset();
-    await fakeHidDevice.handleInputReport(testCase.inputReportData);
+    await fakeHidDevice.handleInputReport(testCase.inputReportData, reportId);
     const contextMessageButtonPress =
         `for test case ${i} (inputReport [${testCase.inputReportData})]`
     if (testCase.expectedButtonEvents !== undefined) {
@@ -45,7 +45,7 @@ export async function checkButtonMapping(
 
     // Release button(s)
     buttonEventListener.calls.reset();
-    await fakeHidDevice.handleInputReport(resetInputReport);
+    await fakeHidDevice.handleInputReport(resetInputReport, reportId);
     const contextMessageButtonRelease = `for test case ${i} (inputReport [${
         resetInputReport} after ${testCase.inputReportData})]`
     if (testCase.expectedButtonEvents !== undefined) {
