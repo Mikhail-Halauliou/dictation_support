@@ -13,24 +13,24 @@ You can test out the SDK capabilities with a supported device using this [demo w
 TODO: host latest release and link here
 
 ###  Supported devices
-| Dictation microphones                    | Foot controls   |
-|:-----------------------------------------|:----------------|
-| Philips SpeechMike Premium LFH3500       | Philips ACC2310 |
-| Philips SpeechMike Premium LFH3510       | Philips ACC2320 |
-| Philips SpeechMike Premium LFH3520       | Philips ACC2330 |
-| Philips SpeechMike Premium LFH3600       |                 |
-| Philips SpeechMike Premium LFH3610       |                 |
-| Philips SpeechMike Premium Touch SMP3700 |                 |
-| Philips SpeechMike Premium Touch SMP3710 |                 |
-| Philips SpeechMike Premium Touch SMP3720 |                 |
-| Philips SpeechMike Premium Touch SMP3800 |                 |
-| Philips SpeechMike Premium Touch SMP3810 |                 |
-| Philips SpeechMike Premium Air SMP4000   |                 |
-| Philips SpeechMike Premium Air SMP4010   |                 |
-| Philips SpeechOne PSM6000                |                 |
-| Philips SpeechMike Ambient PSM5000       |                 |
-| Nuance PowerMic III                      |                 |
-| Nuance PowerMic 4                        |                 |
+| Dictation microphones                    | Foot controls                      | Other devices              |
+|:-----------------------------------------|:-----------------------------------|:---------------------------|
+| Philips SpeechMike Premium LFH3500       | Philips ACC2310                    | Grundig Digta Soundbox 830 |
+| Philips SpeechMike Premium LFH3510       | Philips ACC2320                    |                            |
+| Philips SpeechMike Premium LFH3520       | Philips ACC2330                    |                            |
+| Philips SpeechMike Premium LFH3600       | Grundig Digta Foot Control 540 USB |                            |
+| Philips SpeechMike Premium LFH3610       | Grundig Digta Foot Pedal 538 USB   |                            |
+| Philips SpeechMike Premium Touch SMP3700 |                                    |                            |
+| Philips SpeechMike Premium Touch SMP3710 |                                    |                            |
+| Philips SpeechMike Premium Touch SMP3720 |                                    |                            |
+| Philips SpeechMike Premium Touch SMP3800 |                                    |                            |
+| Philips SpeechMike Premium Touch SMP3810 |                                    |                            |
+| Philips SpeechMike Premium Air SMP4000   |                                    |                            |
+| Philips SpeechMike Premium Air SMP4010   |                                    |                            |
+| Philips SpeechOne PSM6000                |                                    |                            |
+| Philips SpeechMike Ambient PSM5000       |                                    |                            |
+| Nuance PowerMic III                      |                                    |                            |
+| Nuance PowerMic 4                        |                                    |                            |
 
 ###  Supported platforms
 * Google Chrome on Windows, macOS, Linux and Chrome OS (Chromebooks)
