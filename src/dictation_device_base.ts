@@ -22,6 +22,8 @@ export enum ImplementationType {
   SPEECHMIKE_GAMEPAD = 1,
   FOOT_CONTROL = 2,
   POWERMIC_3 = 3,
+  DIGTA_FOOT_CONTROL = 4,
+  DIGTA_SOUNDBOX = 5,
 }
 
 export enum DeviceType {
@@ -49,6 +51,9 @@ export enum DeviceType {
   POWERMIC_3 = 4097,
   POWERMIC_4 = 100,
   SPEECHMIKE_AMBIENT_PSM5000 = 5000,
+  DIGTA_FOOT_CONTROL_540 = 36,
+  DIGTA_FOOT_PEDAL_538 = 24,
+  DIGTA_SOUNDBOX_830 = 4,
 }
 
 export enum ButtonEvent {

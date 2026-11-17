@@ -17,6 +17,8 @@
 
 import {DictationDevice} from './dictation_device';
 import {ButtonEventListener, ImplementationType} from './dictation_device_base';
+import {DigtaFootControlDevice} from './digta_foot_control_device';
+import {DigtaSoundboxDevice} from './digta_soundbox_device';
 import {FootControlDevice} from './foot_control_device';
 import {PowerMic3Device} from './powermic_3_device';
 import {SpeechMikeGamepadDevice} from './speechmike_gamepad_device';
@@ -69,6 +71,19 @@ const DEVICE_FILTERS: Readonly<
         // PowerMic III
         Object.freeze(
             {vendorId: 0x0554, productId: 0x1001, usagePage: 1, usage: 0}),
+      ]),
+      [ImplementationType.DIGTA_FOOT_CONTROL]: Object.freeze([
+        // Digta Foot Control 540 USB
+        Object.freeze(
+            {vendorId: 0x15d8, productId: 0x0024, usagePage: 0xffff, usage: 1}),
+        // Digta Foot Pedal 538 USB
+        Object.freeze(
+            {vendorId: 0x15d8, productId: 0x0018, usagePage: 0x0c, usage: 3}),
+      ]),
+      [ImplementationType.DIGTA_SOUNDBOX]: Object.freeze([
+        // Digta Soundbox 830
+        Object.freeze(
+            {vendorId: 0x15d8, productId: 0x0004, usagePage: 0x0c, usage: 1}),
       ]),
     });
 
@@ -214,6 +229,10 @@ export class DictationDeviceManager {
         return SpeechMikeGamepadDevice.create(hidDevice);
       case ImplementationType.FOOT_CONTROL:
         return FootControlDevice.create(hidDevice);
+      case ImplementationType.DIGTA_FOOT_CONTROL:
+        return DigtaFootControlDevice.create(hidDevice);
+      case ImplementationType.DIGTA_SOUNDBOX:
+        return DigtaSoundboxDevice.create(hidDevice);
       default:
         checkExhaustive(implType);
     }

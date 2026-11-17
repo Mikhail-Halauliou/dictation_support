@@ -17,6 +17,8 @@
 
 export * from './dictation_device_base';
 export * from './dictation_device_manager';
+export * from './digta_foot_control_device';
+export * from './digta_soundbox_device';
 export * from './foot_control_device';
 export * from './powermic_3_device';
 export * from './speechmike_gamepad_device';
